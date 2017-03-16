@@ -1,0 +1,22 @@
+package telefone;
+
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
+
+public class TelefoneTest 
+{	
+	private Telefone telefone;
+	
+	@Before
+	public void criaTelefone()
+	{	this.telefone = new TelefoneImplements();
+	}
+	
+	@Test
+	public void testeTamanhoNumero ()
+	{	telefone.setNumero(12345678);
+		assertEquals(8, telefone.getTamanhoNumero(), 0);
+	}
+
+}

@@ -1,0 +1,2 @@
+corrigido o nome do pacote
+retirado o import java.io.Serializable; era desnecessário

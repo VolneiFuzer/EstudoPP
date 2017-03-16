@@ -1,0 +1,6 @@
+ajustado o pacote package br.com.facisa.pp.conta;
+retirado o this.saldo = 0.0; do contrutor e iniciada a variável juntamente com a classe
+ajustado o o metodo depositar que estava this.saldo += this.saldo + quantia;
+this.saldo = this.saldo - quantia; ajustado
+if (0 < quantia && quantia <= this.saldo)
+renomeada a classe para Conta

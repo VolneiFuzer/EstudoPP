@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+  <title>Exercício - Exceções</title>
+  <style type="text/css">
+<!--
+ .style1 {font-family: Arial, Helvetica, sans-serif}
+ .style3 {color: #0000FF}
+ .fonte_arial {
+font-family: Arial, Helvetica, sans-serif;
+}
+ .centralizado {
+text-align: center;
+}
+ .centralizado {
+text-align: center;
+}
+-->
+  </style>
+</head>
+
+<body>
+
+<blockquote>
+  <p class="style1">Faculdade de Ciências Aplicadas - FACISA <br>
+  Curso: Sistemas de Informação<br>
+  Disciplina: Práticas de Programação<br>
+  Prof: Bruno de Brito<br>
+  Exercício - Exceções<br>
+<br>
+	ara resolução destas questões, utilize as classes contidas neste <a href="Exercicio Excecoes.zip">arquivo</a>
+</p>
+
+</blockquote>
+<ol class="style1">
+  <li>Construa uma classe de exceção para representar uma nota inválida (NotaInvalidaException), complemente a classe AvaliacaoApp para que o método setNota lance esta exceção se a nota fornecida for menor que 0.0 ou maior que 10.0. Modifique o método main da classe AvaliacacaoApp para que capture esta exceção, aborte o preenchimento de notas e apresenta a mensagem "A nota deve estar no intervalo entre 0,0  e 10,0".</li>
+  <li>Modifique a classe Mes para que lance uma exceção com nome MesInvalidoException quando for fornecido um parâmetro menor que 1 e maior 12 no método construtor, altere a classe NomeDoMesApp para que o método main encerre execução imprimindo a mensagem "O número do mês deve estar contido no intervalo [1, 12]" quando for fornecido um valor fora do intervalo entre 1 e 12.</li>
+  <li>Altere a classe Pessoa para que esta lance uma exceção chamada NomeInvalidoException com a mensagem "O nome fornecido não pode ser nulo ou vazio" no método setNome, se o nome fornecido for nulo ou vazio. Modifique a classe NomeInvertidoApp para que solicite que o usuário digite um nome, que será repassado para o método setNome, enquanto o nome fornecido for nulo ou vazio. Se esta situação ocorrer, deverá ser impresso a mensagem da exceção.</li>
+  <li>Sabendo que uma data segue limitações de acordo o mês (mês com apenas 30 dias e ano bissexto), complemente a classe Mes para que esta lance exceção quando for fornecido um dia incompatível com o mês e o ano em seu construtor. A exceção lançada deverá se chamar DataInvalidaException e deve possuir a seguinte mensagem de erro "Os parâmetros fornecidos não representam uma data válida". Altere o método main da classe IntervaloDeDiasApp para que este solicite uma nova data (dia, mês e ano) sempre que o construtor de Data for chamado e este lançar exceção (cuja mensagem de erro deverá ser impressa).
+  <li>Crie uma classe de exceções com nome JogoEncerradoException e com mensagem de erro "Não é permitido tentar mais palpites, o jogo está encerrado". Altere a classe Forca para que esta lance a exceção criada se o método tentar palpite for chamado e o jogo já acabou. O jogo acabou se o jogador já ganhou ou já perdeu. Modifique o método main da classe JogoForcaApp para que este pare de solicitar um novo palpite após o encerramento do jogo. (Atenção: o código contém erro semântico que será corrigido com uso de exceções).</li>
+</ol>
+</body>
+</html>

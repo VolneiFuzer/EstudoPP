@@ -1,0 +1,68 @@
+package biblioteca.testes;
+
+import static org.junit.Before;
+import static org.junit.Test;
+import biblioteca.excecoes.CampoNuloException;
+import biblioteca.excecoes.NumeroInvalidoException;
+import biblioteca.excecoes.StringVaziaException;
+import biblioteca.modelo.LivroIF;
+import static org.junit.Assert.*;
+
+public class VolneiDaSilvaFuzerPaimJuniorTestLivro extends TestLivroIFAbstract
+{	
+	private LivroIF livro; 
+	
+	@Before
+	public void criaLivro()
+	{	this.livro = criarImplementacaoLivro();
+	}
+	
+	@Test (expected = CampoNuloException.class)
+	public void testTituloNulo () throws CampoNuloException, StringVaziaException
+	{	this.livro.setTitulo(null);
+	}
+	
+	@Test (expected = StringVaziaException.class)
+	public void testTituloVazio () throws CampoNuloException, StringVaziaException
+	{	this.livro.setTitulo(" ");
+	}
+	
+	@Test (expected = CampoNuloException.class)
+	public void testEditoraNulo () throws CampoNuloException, StringVaziaException
+	{	this.livro.setEditora(null);
+	}
+	
+	@Test (expected = StringVaziaException.class)
+	public void testEditoraVazia () throws CampoNuloException, StringVaziaException
+	{	this.livro.setEditora(" ");
+	}
+	
+	@Test (expected = NumeroInvalidoException.class)
+	public void testNumeroInvalidoZero () throws NumeroInvalidoException
+	{	this.livro.setEdicao(0);
+	}
+	
+	@Test (expected = NumeroInvalidoException.class)
+	public void testNumeroInvalidoNegativo () throws NumeroInvalidoException
+	{	this.livro.setEdicao(-1);
+	}
+	
+	@Test
+	public void testeTituloValido() throws CampoNuloException, StringVaziaException 
+	{	livro.setTitulo("LivroDoVolnei");
+		assertEquals("LivroDoVolnei",livro.getTitulo());
+	}
+	
+	@Test
+	public void testeEditoraValida() throws CampoNuloException, StringVaziaException 
+	{	livro.setEditora("EditoraDoVolnei");
+		assertEquals("EditoraDoVolnei", livro.getEditora());
+	}
+	
+	@Test
+	public void testeNumeroValido() throws NumeroInvalidoException
+	{	livro.setEdicao(1);
+		assertEquals(1,livro.getEdicao());
+	}
+	
+}

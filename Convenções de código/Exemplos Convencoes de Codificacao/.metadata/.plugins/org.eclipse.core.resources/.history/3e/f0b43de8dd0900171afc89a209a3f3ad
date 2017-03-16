@@ -1,0 +1,2 @@
+ajustado o pacote package br.com.facisa.pp.conta;
+retirado o this.saldo = 0.0; do contrutor e iniciada a variável juntamente com a classe

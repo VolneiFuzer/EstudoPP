@@ -1,0 +1,5 @@
+package br.com.facisa.pp.questao04;
+
+public class DataInvalidaException {
+
+}

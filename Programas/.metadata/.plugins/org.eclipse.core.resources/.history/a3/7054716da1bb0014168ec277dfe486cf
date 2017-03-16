@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class InsertionSortArrayApp 
+{	
+	public static void main(String[] args)
+	{	Scanner dadosParaTratar = new Scanner(System.in);
+		System.out.print("Digite os dados: ");
+		String dados = dadosParaTratar.nextLine();
+		
+		InsertionSortArray insertionSort = new InsertionSortArray();
+		
+		insertionSort.setDadosParaTratar(dados);
+		
+		System.out.print(insertionSortArray.toString());
+		
+		dadosParaTratar.close();
+	}
+	
+}
+
+/* 
+4
+Soneca 7.1
+DeBoate 8.3
+Vaqueira 7.6
+DonoDaNet 6.8
+
+
+5
+Soneca 7.1
+DeBoate 8.3
+Vaqueira 7.6
+DonoDaNet 6.8
+EuSouMaisEu 10
+
+12
+Soneca 7.1
+DeBoate 8.3
+Vaqueira 7.6
+DonoDaNet 6.8
+EuSouMaisEu 10
+EuMeFudn 2.4
+TaNaVala 3.0
+SemSalvacao 4.8
+Mediano 7.6
+EuQuaseLa 9.8
+SeiLaMeuNome 8.4
+Esperanca 6.6
+
+*/

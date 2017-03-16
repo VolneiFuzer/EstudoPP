@@ -1,0 +1,63 @@
+package email;
+
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class EmailTest 
+{	private Email email;
+
+	@Before
+	public void criaEmail()
+	{	this.email = new EmailImplements();
+	}
+	
+		@Test(expected=EmailInvalidoException.class)
+		public void testEmailAVazio() throws EmailInvalidoException
+		{	this.email.setEndereco("@brito.com.br");	
+		}
+		
+		@Test(expected=EmailInvalidoException.class)
+		public void testEmailBVazio() throws EmailInvalidoException
+		{	this.email.setEndereco("bruno@.com.br");	
+		}
+		
+		@Test(expected=EmailInvalidoException.class)
+		public void testEmailAMaiusc() throws EmailInvalidoException
+		{	this.email.setEndereco("BRUNO@brito.com.br");	
+		}
+		
+		@Test(expected=EmailInvalidoException.class)
+		public void testEmailBMaiusc() throws EmailInvalidoException
+		{	this.email.setEndereco("bruno@BRITO.com.br");	
+		}
+		
+		@Test
+		public void testEmailANum() throws EmailInvalidoException
+		{	this.email.setEndereco("bruno2015@brito.com.br");	
+			assertEquals("bruno2015@brito.com.br", this.email.getEndereco());
+		}
+		
+		@Test
+		public void testEmailBNum() throws EmailInvalidoException
+		{	this.email.setEndereco("bruno@brito2015.com.br");	
+			assertEquals("bruno@brito2015.com.br", this.email.getEndereco());
+		}
+		
+		@Test
+		public void testEmailAPonto() throws EmailInvalidoException
+		{	this.email.setEndereco("prof.bruno@brito.com.br");	
+			assertEquals("prof.bruno@brito.com.br", this.email.getEndereco());
+		}
+		
+		@Test(expected=EmailInvalidoException.class)
+		public void testEmailAPerc() throws EmailInvalidoException
+		{	this.email.setEndereco("prof%bruno@brito.com.br");	
+		}
+		
+		@Test(expected=EmailInvalidoException.class)
+		public void testEmailAAsterisco() throws EmailInvalidoException
+		{	this.email.setEndereco("prof*bruno@brito.com.br");	
+		}
+}
+

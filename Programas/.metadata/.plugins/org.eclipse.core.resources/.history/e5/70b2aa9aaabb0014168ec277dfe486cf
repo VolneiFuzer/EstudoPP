@@ -1,0 +1,76 @@
+public class InsertionSortArray 
+{	
+	private int tamanhoArray;
+	private int posicao = 0;
+	private String[] nomeAlunos = new String [tamanhoArray];
+	private double[] notaAlunos = new double [tamanhoArray];
+	private double ponto = 1.1;	
+	private String dadosParaTratar;
+
+
+// Fazer com construtor para preencher 
+	
+	public int getTamanhoArray() 
+	{	return tamanhoArray;
+	}
+	
+	public void setTamanhoArray(int tamanhoArray) 
+	{	this.tamanhoArray = tamanhoArray;
+	}
+	
+	public void adicionarDados(String nome, double nota)
+	{	nomeAlunos[posicao] = nome;
+		notaAlunos[posicao] = nota;
+		posicao ++;
+	}
+	
+	public String getDadosParaTratar() {
+		return dadosParaTratar;
+	}
+
+	public void setDadosParaTratar(String dadosParaTratar2) {
+		this.dadosParaTratar = dadosParaTratar2;
+	}
+	
+	public void ordenaDados()
+	{		
+		for (int x = 1; x <= tamanhoArray-1; x++)
+		{	double daVezNota = notaAlunos[x];
+			String daVezNome = nomeAlunos[x];
+			
+			int y = x-1;
+			
+			while (y >=0 && notaAlunos[y] > daVezNota)
+			{	notaAlunos[y+1] = notaAlunos[y];
+				nomeAlunos[y+1] = nomeAlunos[y];
+				y --;
+			}
+			
+			notaAlunos[y + 1] = daVezNota;
+			nomeAlunos[y + 1] = daVezNome;
+		}	
+	}
+	
+	public String toString()
+	{	String arreyString = "";
+		for (int x = 0; x < tamanhoArray; x++) 
+		{	if(ponto == 0.0 || ponto < 0.0)
+			{	ponto = 0.0;
+			} else 
+				{	ponto = ponto - 0.1;
+				}
+			arreyString += nomeAlunos[x] + " " + ponto  + "\n";	
+		}
+		return arreyString;
+	}
+	
+// Parei Aqui...
+	
+	public String[] getDadosAjustaDados()
+	{	String dadosParaAjustar = getDadosParaTratar();
+		String [] dadosTratados = dadosParaAjustar.split(" ");
+		return dadosTratados;
+	}
+	
+
+} 

@@ -1,0 +1,39 @@
+package telefone;
+
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
+
+public class TelefoneTest 
+{	
+	private Telefone telefone;
+	
+	@Before
+	public void criaTelefone()
+	{	this.telefone = new TelefoneImplements();
+	}
+	
+	@Test
+	public void testeTamanhoNumero ()
+	{	telefone.setNumero(556134111200L);
+		assertEquals(13, telefone.getTamanhoNumero(), 0);
+	}
+	
+	@Test
+	public void testeRetornoCodigoPais()
+	{	telefone.setNumero(556134111200L);
+		assertEquals(12, telefone.getCodigoPais());
+	}
+	
+	@Test
+	public void testeRetornoDD()
+	{	telefone.setNumero(556134111200L);
+		assertEquals(34, telefone.getDDD());
+	}	
+	
+	@Test
+	public void testeRetornoIdentificador()
+	{	telefone.setNumero(556134111200L);
+		assertEquals(34, telefone.getDDD());
+	}	
+}

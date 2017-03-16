@@ -1,0 +1,7 @@
+ajustado nome do pacote
+retirada a importação generica import java.sql.*;
+inserido comentário
+colocado identificador em minusculo
+formatado
+alterado o nome da classe
+alterado SetIdentificador para setIdentificador

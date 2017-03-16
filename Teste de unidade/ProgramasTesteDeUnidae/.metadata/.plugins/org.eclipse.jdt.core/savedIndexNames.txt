@@ -1,0 +1,4 @@
+INDEX VERSION 1.129+C:\Users\Volnei\Documents\GIT\EstudoParaMonitoriaDePP\Teste de unidade\ProgramasTesteDeUnidae\.metadata\.plugins\org.eclipse.jdt.core
+1707597097.index
+1695450564.index
+2659722537.index

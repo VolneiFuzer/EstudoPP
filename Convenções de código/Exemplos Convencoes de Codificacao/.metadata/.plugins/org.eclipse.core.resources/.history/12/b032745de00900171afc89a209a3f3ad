@@ -1,0 +1,7 @@
+colocada o nome da classe no padrão PascalCase
+ajustado o package br.com.facisa.pp.contador;
+removido o import do scanner que era desnecessário
+colocado @author Bruno de Brito no comentário de classe
+incluido o comentário no decrementa contador
+alterada a variavel NUM para num
+alterado Incrementar para incrementar
